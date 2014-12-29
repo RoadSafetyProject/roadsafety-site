@@ -1,0 +1,31 @@
+<div><!-- Recent Posts -->
+{% load blog_tags keyword_tags i18n %}
+{% blog_recent_posts 5 as recent_posts %}
+{% if recent_posts %}
+	<h3>{% trans "Recent Articles" %}</h3>
+	<ul class="list-unstyled tweets">
+	{% for recent_post in recent_posts %}
+		<li class="tweet">
+			<h4><a href="{{ recent_post.get_absolute_url }}">{{ recent_post.title }}</a></h4>
+			<p class="recent-summary">
+				{{ recent_post.description_from_content|safe }}
+			</p>
+			<small class="timespan">{{ recent_post.publish_date|timesince }} {% trans "ago" %}</small>
+			<a href="{{ recent_post.get_absolute_url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<h3>{% trans "Recent Articles" %}</h3>
+	<ul class="list-unstyled tweets">
+		<li class="tweet">
+			<h4><a href="">No recent post</a></h4>
+			<p class="recent-summary">
+				No blog posts made yet!
+			</p>
+		</li>
+	</ul>
+{% endif %}
+</div><!-- /Recent Posts -->
+
+
