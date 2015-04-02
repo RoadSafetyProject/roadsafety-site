@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+{% blocktrans %}
+<h2>Welcome to AFRISOD!</h2>
+<p>
+    AFRISOD is an iniative aiming to reach out to the less fortunate, the sick and the lone. Joining hands to make the world a better place.
+    We're aiming to reach out to all in need and show them the will that we care.
+</p>
+</p> It's time to lend hand to lives, a greatest gift of all. We can't go on, pretending day by day, that some one, some where will soon make a change.
+    We're the part of God's great big family. And the truth, you know love is all we need.
+</p>
+<p>
+We're the ones, we're the children, we're the ones to make a brighter day, so let's start giving.
+</p>
+
+{% endblocktrans %}
+{% endblock %}

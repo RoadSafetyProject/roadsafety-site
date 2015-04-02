@@ -363,3 +363,31 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+#Workaround
+#
+# Make these unique, and don't share it with anybody.
+SECRET_KEY = "a40b9219-554d-473c-bccd-8b06d1d12f6c5745de63-09cb-41b9-9921-d7f4348751e337f1756a-d8f4-4319-b381-e3b5ef3cf499"
+NEVERCACHE_KEY = "62bd7677-eec5-4d43-af91-6f40d62f2e882c0df998-e71b-4d8b-b1f0-2d4c533444f3655c0bc9-c8c5-4280-bfeb-e2182e57fdcd"
+
+ALLOWED_HOSTS = ['*']
+
+TIME_ZONE = 'Africa/Dar_es_Salaam'
+
+DATABASES = {
+    "default": {
+        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        # DB name or path to database file if using sqlite3.
+        "NAME": "roadsafety_site",
+        # Not used with sqlite3.
+        "USER": "roadsafety",
+        # Not used with sqlite3.
+        "PASSWORD": "roadsafety",
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "localhost",
+        # Set to empty string for default. Not used with sqlite3.
+        "PORT": "5432",
+    }
+}
+
